@@ -11,10 +11,50 @@
     <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
             integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
             crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="myBoard" style="width: 500px;"></div>
-     <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    <ul class="navbar">
+        <li>
+            <P>Chess move Analyser</P>
+        </li>
+        <li>
+            <p class="credits"> Made by <a href="https://www.instagram.com/serwin.dev/">Serwin.dev</a> </p>
+        </li>
+    </ul>
+
+    <div class="inputBtn">
+        <p class="title">Enter FEN Sring and find out the blunders! -- Click "Gimme one" to randomly see one</p>
+        <input type="text" placeholder="Enter FEN string: " id="inputFEN">
+        <div class="btns">
+            <button id="gimmeBtn">Gimme one!!</button>
+            <button id="generateBtn">Generate</button>
+        </div>
+    </div>
+    <div class="body-content">
+        <div id="text-loading">Loading...</div>
+        <div id="myBoard" style="width: 500px;"></div>
+    </div>
+    <div class="tutorial">
+        <div class="cont">
+            <img src="./img/custom/hanging.jpg" alt="Pawn with frustrated symbol">
+            <h2>This symbol indicates that the piece is being ATTACKED but not DEFENDED</h2>
+        </div>
+        <br>
+        <div class="cont">
+            <img src="./img/custom/defended.jpg" alt="Pawn with sweating symbol">
+            <h2>This symbol indicates that the piece is being ATTACKED but also DEFENDED</h2>
+        </div>
+        <br>
+        <div class="cont">
+            <img src="./img/custom/defended2.jpg" alt="Pawn with green square">
+            <h2>This symbol indicates that the piece is DEFENDED with no ATTACKS (Being in peace)</h2>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js"></script>
 </body>
 </html>
